@@ -8,12 +8,22 @@
     <link href="./stylesheets/fonts.css" rel="stylesheet">
     
     <!-- CSS Plugin -->
-    <link rel="stylesheet" href="./font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <!-- Theme CSS -->
     <link href="./stylesheets/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./images/logo.png">
 </head>
 
+<script src="./js/typed.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.element', {
+        strings: ["Do Homework.", "Sleep.", "Eat Food." , "Live Life.", "#SAM.", "#WALKER.", "#FEELS."],
+        typeSpeed: 0,
+        loop: true
+      });
+  });
+</script>
 
 
 
@@ -59,9 +69,17 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-head">PRODUCTIV+</h1>
-                        <p class="intro">Do Homework. Sleep. Eat Food.</p><p>
-                        <a onclick="redirect()" class="btn btn-outline btn-xl page-scroll">Are You Ready?</a>
+                        <!-- <p class="intro">Do Homework. Sleep. Eat Food.</p><p> -->
+                        <p class="intro">
+                            <div id="main-text">
+                                <h2 class="raleway-light">
+                                    <span class="typing-world element emph"></span><span class="typed-cursor"></span>
+                                </h2>
+                            </div>
+                        </p>    
 
+                    <p>
+                        <a onclick="redirect()" class="btn btn-outline btn-xl page-scroll">Are You Ready?</a>
                     </p></div>
                 </div>
             </div>
