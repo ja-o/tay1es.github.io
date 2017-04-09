@@ -62,4 +62,5 @@ var isAdmin = false;
         profInfo += "\nEmail: " + profile.getEmail();
         profInfo += "googleUser: " + googleUser;
         alert("Welcome " +profile.getName()+ "! Here is some basic profile info:\n" + profInfo);
+        window.location.href = "https://tay1es.github.io/mainpage.html";
       };
