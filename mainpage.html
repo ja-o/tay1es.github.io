@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="light-bootstrap-dashboard-master/assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Productiv+: Main</title>
+    <title>Productiv<sup>+</sup></title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -33,8 +33,16 @@
 </head>
 <body>
 
+<script>
+	function signOut() {
+		var auth2 = gapi.auth2.getAuthInstance();
+		auth2.signOut().then(function () {
+		console.log('User signed out.');
+	});
+</script>
+
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="light-bootstrap-dashboard-master/assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="orange">
 
     <!--
 
@@ -46,7 +54,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
             <h3>
-                Productiv+
+                <b>Productiv<sup>+</sup></b>
                 </h3>
             </div>
 
@@ -72,11 +80,12 @@
             
                 
             </ul>
-                <h1 style = "padding-top: 250px;"> 
+                <h1 style = "padding-top: 300px;"> 
                 <center>
                 <p class="copyright pull-left">
-               &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Bread Ninjas</a> <br> Made with love for a better web~ 
-                </p>
+					<center>
+						<font size='2'>2017 © Team Bread Ninjas</font>
+					</center>
                 </center></h1>
                 <style type="text/css">
                     p{
@@ -112,8 +121,8 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="#">You have 3 tasks to complete today</a></li>
-                                <li><a href="#">You are in the lead in your team</a></li>
-                                <li><a href="#">Jen would like to chat</a></li>
+                                <li><a href="#">Jason finished the Index page</a></li>
+                                <li><a href="#">Katherine sent you a chat</a></li>
                               </ul>
                         </li>
                         <li>
@@ -141,11 +150,10 @@
                                 <li><a href="#">Start a task</a></li>
                                 <li><a href="#">Add a task</a></li>
                                 <li><a href="#">Add a subtask</a></li>
-                                <li><a href="#">Points</a></li>
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" onclick="signOut">
                                 <p>Log out</p>
                             </a>
                         </li>
@@ -158,8 +166,8 @@
                     <div class="col-md-6">
                         <div class="card ">
                             <div class="header">
-                                <h4 class="title">Projects</h4>
-                                <p class="category">Tasks</p>
+                                <h4 class="title">Build Productiv<sup>+</sup> Website</h4>
+                                <p class="category">Task List</p>
                             </div>
                             <div class="content">
                                 <div class="table-full-width">
@@ -171,7 +179,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td>Integrate Google Sign in functionality</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -187,7 +195,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td>Design UI</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -203,8 +211,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox" checked="">
                                                     </label>
                                                 </td>
-                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-                                                </td>
+                                                <td>Build Timer</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -220,7 +227,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td>Integrate React JS</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -236,7 +243,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Read "Following makes Medium better"</td>
+                                                <td>Integrate SparkPost for Automated Emails</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -252,7 +259,7 @@
                                                         <input type="checkbox" value="" data-toggle="checkbox">
                                                     </label>
                                                 </td>
-                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td>Create Function to View Online Users</td>
                                                 <td class="td-actions text-right">
                                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
                                                         <i class="fa fa-edit"></i>
@@ -265,158 +272,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-<div style="float: left; position: relative; left: -200px; top: -400px">
-<style>
-
-* {margin: 0; padding: 0;}
-
-.container {
-    padding: 10px;
-    text-align: center;
-}
-
-.timer {
-    padding: 10px;
-    background: linear-gradient(top, #222, #444);
-    overflow: hidden;
-    display: inline-block;
-    border: 1px solid #444444;
-    border-radius: 5px;
-    position: relativ
-    
-    box-shadow: 
-        inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
-        0 5px 20px -10px rgba(0, 0, 0, 1);
-    margin: 30px 5px 10px 700px;
-}
-
-.cell {
-    /*Should only display 1 digit. Hence height = line height of .numbers
-    and width = width of .numbers*/
-    width: 0.60em;
-    height: 40px;
-    font-size: 20px;
-    overflow: hidden;
-    position: relative;
-    float: left;
-}
-
-.numbers {
-    width: 0.6em;
-    line-height: 40px;
-    font-family: digital, arial, verdana;
-    text-align: center;
-    color: #444444;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    /*Glow to the text*/
-}
-
-/*Styles for the controls*/
-#timer_controls {
-    margin-top: -5px;
-    margin-left: 700px;
-}
-#timer_controls label {
-    cursor: pointer;
-    padding: 5px 10px;
-    background: #efefef;
-    font-family: arial, verdana, tahoma;
-    font-size: 11px;
-    border-radius: 0 0 3px 3px;
-}
-input[name="controls"] {display: none;}
-
-/*Control code*/
-#stop:checked~.timer .numbers {animation-play-state: paused;}
-#start:checked~.timer .numbers {animation-play-state: running;}
-#reset:checked~.timer .numbers {animation: none;}
-
-.moveten {
-    /*The digits move but dont look good. We will use steps now
-    10 digits = 10 steps. You can now see the digits swapping instead of 
-    moving pixel-by-pixel*/
-    animation: moveten 1s steps(10, end) infinite;
-    /*By default animation should be paused*/
-    animation-play-state: paused;
-}
-.movesix {
-    animation: movesix 1s steps(6, end) infinite;
-    animation-play-state: paused;
-}
-
-/*Now we need to sync the animation speed with time speed*/
-/*One second per digit. 10 digits. Hence 10s*/
-.second {animation-duration: 10s;}
-.tensecond {animation-duration: 60s;} /*60 times .second*/
-
-.milisecond {animation-duration: 1s;} /*1/10th of .second*/
-
-.minute {animation-duration: 600s;} /*60 times .second*/
-.tenminute {animation-duration: 3600s;} /*60 times .minute*/
-
-.hour {animation-duration: 36000s;} /*60 times .minute*/
-.tenhour {animation-duration: 360000s;} /*10 times .hour*/
-
-@keyframes moveten {
-    0% {top: 0;}
-    100% {top: -400px;} 
-    /*height = 40. digits = 10. hence -400 to move it completely to the top*/
-}
-
-@keyframes movesix {
-    0% {top: 0;}
-    100% {top: -240px;} 
-    /*height = 40. digits = 6. hence -240 to move it completely to the top*/
-}
-
-</style>
-
-<div class="container" bgcolor="white">
-    <!-- time to add the controls -->
-    <input id="start" name="controls" type="radio" />
-    <input id="stop" name="controls" type="radio" />
-    <input id="reset" name="controls" type="radio" />
-    <div class="timer">
-        <div class="cell">
-            <div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-        </div>
-        <div class="cell">
-            <div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-        </div>
-        <div class="cell divider"><div class="numbers">:</div></div>
-        <div class="cell">
-            <div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
-        </div>
-        <div class="cell">
-            <div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
-        </div>
-        <div class="cell divider"><div class="numbers">:</div></div>
-        <div class="cell">
-            <div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
-        </div>
-        <div class="cell">
-            <div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
-        </div>
-        <div class="cell divider"><div class="numbers">:</div></div>
-        <div class="cell">
-            <div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-        </div>
-    </div>
-    <!-- Lables for the controls -->
-    <div id="timer_controls">
-        <label for="start">Start</label>
-        <label for="stop">Stop</label>
-        <label for="reset">Reset</label>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-
 
                             
                                     <hr>
@@ -429,11 +284,13 @@ input[name="controls"] {display: none;}
                     </div>
                 </div>
             </div>
+        </div>
 
 
           <footer class="footer">
-              <p> John is online </p> 
-              <p> Karen is online</p>
+              <div class="col-sm-offset-0 col-sm-2">James is online</div>
+              <div class="col-sm-2">Neejole is online</div>
+			  <div class="col-sm-2">Becky is online</div>
           </footer>
 
 
