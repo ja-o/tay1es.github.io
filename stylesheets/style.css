@@ -624,3 +624,12 @@ h4 {
     display:none;
   }
 }
+
+/* GOOGLE OAUTH BUTTON*/
+.g-signin2{
+  width: 100%;
+}
+
+.g-signin2 > div{
+  margin: 0 auto;
+}
