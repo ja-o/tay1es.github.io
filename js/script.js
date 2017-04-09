@@ -51,8 +51,6 @@ var isAdmin = false;
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
-        document.getElementById("nameInput").value = profile.getName();
-        document.getElementById("nameInput").disabled = true;
         var admin = ["117366956372745871124", "112347100247659202914"];
         //alert($.inArray(profile.getId() + "", admin));
         if($.inArray(profile.getId() + "", admin) != -1) {
