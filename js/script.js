@@ -56,5 +56,5 @@ var isAdmin = false;
         if($.inArray(profile.getId() + "", admin) != -1) {
           alert("You are an admin!");
         }
-        
+        alert("Welcome" +profile.getName()+ "!")
       };
