@@ -1,5 +1,4 @@
 window.onload = function() {
-
   window.sr = ScrollReveal();
   sr.reveal('#fade-in', {duration:300});
 
@@ -10,11 +9,29 @@ window.onload = function() {
      var target = $(this.getAttribute('href'));
      if( target.length ) {
          event.preventDefault();
-         $('html, body').stop().animate({
+         $('html, body').animate({
              scrollTop: target.offset().top
          }, 1000);
      }
  });
+///////////////////////////////////////////
+   
+
+
+  var modal = document.getElementById('login-modal');
+  var login = document.getElementById("btn2");
+
+  login.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+
+  ////////////////////////////
 };
 
 

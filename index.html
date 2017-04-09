@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="775098363061-lkohsupu1sdsv0k51gnkvdhmal1a1f25.apps.googleusercontent.com">
+    
     <title>BITCAMP</title>
     <!-- Bootstrap -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -12,25 +15,16 @@
     <!-- Theme CSS -->
     <link href="./stylesheets/style.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./images/logo.png">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <!-- JS LIBRARIES -->
 <script src="./js/typed.js"></script>
 <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function(){
-      Typed.new('.element', {
-        strings: ["Increase Productivity", "Organize Projects", "Collaborate with Others", "See Activity in Real time"],
-        typeSpeed: 0,
-        loop: true
-      });
-  });
-</script>
-
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <body id="page-top" data-target=".navbar-fixed-top">
+
+
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -48,16 +42,15 @@
                         <a href=""></a>
                     </li>
                     <li>
-                        <a class="page-scroll" onclick="redirect()">
+                        <a class="page-scroll" id="btn2">
                         Sign Up/Login
-
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="">Explore</a>
+                        <a class="page-scroll" href="#why-productiv">Explore</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="t">About Us</a>
+                        <a class="page-scroll" href="#about">About Us</a>
                     </li>
                     <li>
                     </li>
@@ -84,15 +77,40 @@
                         </p>    
 
                     <p>
-                        <a onclick="redirect()" class="btn btn-outline btn-xl page-scroll">Are You Ready?</a>
+                        <a onclick="" class="btn btn-outline btn-xl page-scroll">Are You Ready?</a>
                     </p></div>
                 </div>
             </div>
         </div>
     </header>
 
+<!-- LOGIN MODAL -->
+<div id="login-modal" class="modal">
+      <div class="modal-content">
+        <h5>SIGN IN</h5>
+        <form method="post" action="/users/login">
 
-    <section id="why-hatch">
+          <div id="login-fields">
+            <div id="input-div">
+              <input type="text" name="username" placeholder='Username'><br>
+              <input type="password" name="password" placeholder='Password'>
+            </div>
+          </div>
+          <br><br>
+          <button class="btn2 btn2-outline btn2-xl page-scroll" id="submit">SUBMIT</button>
+        </form>
+        <br><br>
+        <h7>OR</h7>
+        <br><br>
+        <h5>Log in with Google!</h5>
+        <br><br>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      </div>
+    </div>
+
+<!-- -->
+
+    <section id="why-productiv">
         <div class="container">
             <div class="explore-heading">
                 <h2>How Productiv<sup>+</sup> Works</h2>
@@ -112,7 +130,7 @@
                         <h3>Collaborate </h3>
                     </div>
                 </div>
-				<div class="col-sm-4 blurb">
+                <div class="col-sm-4 blurb">
                     <div id="clock-icon">
                         <i class="fa fa-clock-o" style="font-size:120px;color:#006df1"></i>
                         <h3>Record </h3>
@@ -120,8 +138,8 @@
                 </div>
             </div>
             <p>
-				Productiv<sup>+</sup> is an new application to manage and organize team productivity both in a professional and casual environment.  Set up team projects, view and start tasks, record time worked, and review project status through daily or weekly progress reports. 
-			</p>
+                Productiv<sup>+</sup> is an new application to manage and organize team productivity both in a professional and casual environment.  Set up team projects, view and start tasks, record time worked, and review project status through daily or weekly progress reports. 
+            </p>
             <p>
                 Unique to other team management websites, Productiv<sup>+</sup> allows you to also view other active team members and what task they are working on.  Working in teams, especially across distances, can be unmotivating and lonesome.  Just by seeing others work at the same time, Prodcitv<sup>+</sup> simulates the boosts in productivity seen while working with a group of people in real life, without distractions of side conversations.  Members can also see how many hours each person has contributed to the project in the challenge tab.</p>
         </div>
@@ -137,16 +155,16 @@
                         <i class="fa fa-puzzle-piece" style="font-size:30px;color:white"></i>
                         <h4>JOIN/CREATE A PROJECT</h4>
                         <p class="box-text">Streamlined interface to not only create projects but also join existing ones.  Within projects, various tasks and subtasks can be delegated to teams up to 10 members.</p>
-					  </div>
+                      </div>
                     </li>
                     <li class="purple-bubble">
                       <div class="purple">
-					    <center>
+                        <center>
                         <i class="fa fa-list" style="font-size:30px;color:white"></i>
-						<h4>RECORD PRODUCTIVITY</h4>
+                        <h4>RECORD PRODUCTIVITY</h4>
                         <p class="box-text">Measure your productivity with a simple timer and compare your hours spent working with your teammates in the competition tab.</p>
                         </center>
-					  </div>
+                      </div>
                     </li>
                     <li class="blue-bubble">
                       <div class="blue">
@@ -159,11 +177,11 @@
                     <li class="yellow-bubble">
                       <div class="yellow">
                         <center>
-						<i class="material-icons" style="font-size:30px;color:white">email</i>
+                        <i class="material-icons" style="font-size:30px;color:white">email</i>
                         <h4>RECIEVE STATUS REPORTS</h4>
                         <p class="box-text">Automated emails, sent either daily or weekly, on project status including what work was done, who worked on what, and who worked the most. </p>
                         </center>
-					  </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -184,53 +202,53 @@
                     <div id="Becky-pic">
                         <div class="about-thumbnail" style="background-image:url('./images/becky-pic.png');"></div>
                     </div>
-					<label for="becky-button">Becky Button</label><br>
-					<font size='2'>Freshman, Electrical Engineering</font>
+                    <label for="becky-button">Becky Button</label><br>
+                    <font size='2'>Freshman, Electrical Engineering</font>
                 </div>
-				<div class="col-sm-4">
+                <div class="col-sm-4">
                     <div id="jason-pic">
                         <div class="about-thumbnail" style="background-image:url('./images/jason-pic.png');"></div>
                     </div>
                     <label for="jason-thomas">Jason Thomas</label><br>
-					<font size='2'>Freshman, CMDA* and Computer Science</font>
+                    <font size='2'>Freshman, CMDA* and Computer Science</font>
                 </div>
-				<div class="col-sm-4">
+                <div class="col-sm-4">
                     <div id="james-pic">
                         <div class="about-thumbnail" style="background-image:url('./images/james-pic.jpg');"></div>
                     </div>
                     <label for="james-zhang">James Zhang</label><br>
-					<font size='2'>Freshman, Computer Science</font>
+                    <font size='2'>Freshman, Computer Science</font>
                 </div>  
                 </center></div>
-			<div class="row">
+            <div class="row">
                 <center>
                 <div class="col-sm-offset-2 col-sm-4">
                     <div id="neejole-pic">
                         <div class="about-thumbnail" style="background-image:url('./images/neejole-pic.png');"></div>
                     </div>
                     <label for="neejole-patel">Neejole Patel</label><br>
-					<font size='2'>Freshman, CMDA* and Computer Science</font>
-				</div>				
-				<div class="col-sm-4">
+                    <font size='2'>Freshman, CMDA* and Computer Science</font>
+                </div>              
+                <div class="col-sm-4">
                     <div id="katherine-pic">
                         <div class="about-thumbnail" style="background-image:url('./images/katherine-pic.png');"></div>
                     </div>
                     <label for="katherine-yap">Katherine Yap</label><br>
-					<font size='2'>Freshman, Computer Engineering</font>
+                    <font size='2'>Freshman, Computer Engineering</font>
                 </div>
                 </center></div>
             <p>
-			Team Bread Ninjas is a group of freshman friends from the Virginia Polytechnic Institute and State University <br> 
-			who brainstormed and created Productiv<sup>+</sup> during the 2017 Bitcamp Hackathon.  <br><br>
-			
-			Our name originates from when Jason bought a two and a half long baguette from the Grab and Go for $4.50, <br>
-			$2.25 on the dinning plan, the day before Bitcamp, and we made every cent count.  The ninja part comes from <br>
-			the the fact that the baguette was difficult to move from place to place and eventually broke in half, <br>
-			creating a bread nunchuck. <br>
-			
-			<font size='2'> *Computational Modeling and Data Analytics </font><br>
+            Team Bread Ninjas is a group of freshman friends from the Virginia Polytechnic Institute and State University <br> 
+            who brainstormed and created Productiv<sup>+</sup> during the 2017 Bitcamp Hackathon.  <br><br>
             
-			<br> 2017 © Team Bread Ninjas
+            Our name originates from when Jason bought a two and a half long baguette from the Grab and Go for $4.50, <br>
+            $2.25 on the dinning plan, the day before Bitcamp, and we made every cent count.  The ninja part comes from <br>
+            the the fact that the baguette was difficult to move from place to place and eventually broke in half, <br>
+            creating a bread nunchuck. <br>
+            
+            <font size='2'> *Computational Modeling and Data Analytics </font><br>
+            
+            <br> 2017 © Team Bread Ninjas
             </p>
         </div>
     </section>
@@ -245,7 +263,5 @@
     <script src="./js/script.js"></script>
     <script src="./js/timeline.js"></script>
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js">
-
-
 </body>
 </html>

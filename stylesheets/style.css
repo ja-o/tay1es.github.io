@@ -143,7 +143,27 @@ a:focus{
   }
 }
 
+/*LOGIN MODAL CSS */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 500px; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
 
 /* Button CSS */
 .btn-outline {
@@ -169,20 +189,49 @@ a:focus{
   font-size: 12px;
 }
 
-/* why-hatch */
-#why-hatch{
+/* Button 2 CSS */
+.btn2-outline {
+  background-color: black;
+  border-color: white;
+  text-decoration-color: white;
+  border: 1px solid;
+}
+.btn2-outline:hover,
+.btn2-outline:focus,
+.btn2-outline:active,
+.btn2-outline.active {
+  background-color: white;
+  border-color: yellow;
+  color: black;
+}
+.btn2 {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 300px;
+}
+.btn2:hover{
+  text
+}
+.btn2-xl {
+  padding: 15px 45px;
+  font-size: 12px;
+}
+
+/* why-productiv */
+#why-productiv{
   text-align: center;
   color: #222;
   position: relative;
   padding-bottom: 100px;
   padding-top:80px;
 }
-#why-hatch h2{
+#why-productiv h2{
   padding-top: 20px;
   font-size: 30px;
   font-weight: 200;
 }
-#why-hatch p.first{
+#why-productiv p.first{
   font-size: 18px;
   font-weight: 100;
 }
@@ -192,7 +241,7 @@ hr{
   border-color:lightgrey;
 }
 
-#why-hatch .blurbs .row{
+#why-productiv .blurbs .row{
   padding: 30px;
 }
 .row{
@@ -200,7 +249,7 @@ hr{
   margin-right: -15px;
 }
 
-#why-hatch h3{
+#why-productiv h3{
   font-weight:100;
   font-size:20px;
 }
@@ -575,6 +624,3 @@ h4 {
     display:none;
   }
 }
-
-
-

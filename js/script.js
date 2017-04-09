@@ -1,17 +1,4 @@
-$(document).ready(function(){
-  var date_input=$('input[name="date"]'); //our date input has the name "date"
-  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-  var options={
-    format: 'mm/dd/yyyy',
-    container: container,
-    todayHighlight: true,
-    autoclose: true,
-  };
-  //date_input.datepicker(options);
-})
-
-
-
+//BASICALLY DOES THE FANCY NAVBAR ANIMATION
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
@@ -39,3 +26,37 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
+///////////////////////////////////////////
+
+// TYPED JS IMPLEMENTATION
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('.element', {
+        strings: ["Increase Productivity", "Organize Projects", "Collaborate with Others", "See Activity in Real time"],
+        typeSpeed: 0,
+        loop: true
+      });
+  });
+
+// GOOGLE OAUTH2 SIGN IN
+var isAdmin = false;
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        console.log("googleUser: " + googleUser);
+        userinfo = googleUser;
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); 
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+        document.getElementById("nameInput").value = profile.getName();
+        document.getElementById("nameInput").disabled = true;
+        var admin = ["117366956372745871124", "112347100247659202914"];
+        //alert($.inArray(profile.getId() + "", admin));
+        if($.inArray(profile.getId() + "", admin) != -1) {
+          alert("You are an admin!");
+        }
+        
+      };
