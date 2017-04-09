@@ -56,6 +56,10 @@ var isAdmin = false;
         if($.inArray(profile.getId() + "", admin) != -1) {
           alert("You are an admin!");
         }
-        var profInfo = "ID: " + profile.getId() + "\nName: " + profile.getName() + "\nImage URL: " + profile.getImageUrl() + "\nEmail: " + profile.getEmail();
+        var profInfo = "ID: " + profile.getId();
+        profInfo += "\nName: " + profile.getName();
+        profInfo += "\nImage URL: " + profile.getImageUrl();
+        profInfo += "\nEmail: " + profile.getEmail();
+        profInfo += "googleUser: " + googleUser;
         alert("Welcome " +profile.getName()+ "! Here is some basic profile info:\n" + profInfo);
       };
