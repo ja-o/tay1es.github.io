@@ -30,16 +30,18 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="light-bootstrap-dashboard-master/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+
+<script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+        console.log('User signed out.');
+    });
+</script>
 </head>
 <body>
 
-<script>
-	function signOut() {
-		var auth2 = gapi.auth2.getAuthInstance();
-		auth2.signOut().then(function () {
-		console.log('User signed out.');
-	});
-</script>
+
 <div class="wrapper">
     <div class="sidebar" data-color="orange">
     <!--
@@ -145,7 +147,7 @@
                               </ul>
                         </li>
                         <li>
-                            <a href="#" onclick="signOut()">
+                            <a href="#" onclick="signOut();">
                                 <p>Log out</p>
                             </a>
                         </li>
