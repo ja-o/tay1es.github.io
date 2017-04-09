@@ -33,7 +33,7 @@ p {
   padding: 100px 0;
   text-align: center;
   color:whitesmoke;
-  background: url('../images/keyboard.jpg') no-repeat fixed;
+  background: url('../images/teams.jpg') no-repeat fixed;
   -webkit-background-size:cover;
   -moz-background-size:cover;
   background-size: cover;
@@ -245,4 +245,26 @@ hr{
 
 .navbar-nav{
   cursor:pointer;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
